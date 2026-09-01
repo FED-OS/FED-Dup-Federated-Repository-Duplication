@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to production
+        run: |
+          echo "Deploying Fed-Dup ${{ github.ref_name }}"
+          # Add your deployment commands here (e.g. ssh, kubectl, aws-cli)

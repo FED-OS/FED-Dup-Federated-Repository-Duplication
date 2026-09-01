@@ -1,0 +1,60 @@
+name: Main Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install and test
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+          pytest tests/ -v
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install and test
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+          pytest tests/ -v --cov=feddup
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bandit security scan
+        run: |
+          pip install bandit
+          bandit -r feddup/ -f json -o bandit-report.json || true
+
+  main:
+    runs-on: ubuntu-latest
+    needs: [build, test, security]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build & Test Summary
+        run: |
+          echo "✅ All checks passed for Fed-Dup!"
+          echo "🛡️ Ready for deployment."

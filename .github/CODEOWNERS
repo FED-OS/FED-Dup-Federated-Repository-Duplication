@@ -1,0 +1,24 @@
+# CODEOWNERS for Fed-Dup
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything not matched below
+*                @yourusername
+
+# Core engine
+/feddup/         @yourusername
+
+# Application entrypoints
+/app.py          @yourusername
+/worker.py       @yourusername
+
+# CI/CD
+/.github/        @yourusername
+
+# Documentation
+/docs/           @yourusername
+/*.md            @yourusername
+
+# Security-sensitive files
+/SECURITY.md     @yourusername
+/Dockerfile      @yourusername
+/requirements.txt @yourusername

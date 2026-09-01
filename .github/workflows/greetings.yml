@@ -1,0 +1,41 @@
+name: Greetings
+
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            # 👋 Welcome to Fed-Dup!
+
+            Thanks for opening your first issue! Here are some quick tips:
+
+            - 📖 Read the [documentation](https://github.com/yourusername/fed-dup#readme)
+            - 🔍 Search existing [issues](https://github.com/yourusername/fed-dup/issues) before posting
+            - 💬 Join the [discussions](https://github.com/yourusername/fed-dup/discussions)
+
+            A maintainer will review your issue soon! 🛡️
+
+          pr-message: |
+            # 🎉 Thank you for your contribution!
+
+            Your first PR to Fed-Dup is appreciated! Here's what happens next:
+
+            1. ✅ Automated tests will run
+            2. 👀 Maintainers will review
+            3. 🔄 Feedback may be requested
+            4. ✨ Your code will help protect repositories!
+
+            We'll review your PR as soon as possible. 🛡️

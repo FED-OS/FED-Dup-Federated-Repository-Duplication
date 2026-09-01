@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Create release notes
+        run: |
+          echo "# Fed-Dup Release ${{ github.ref_name }}" > release-notes.md
+          echo "" >> release-notes.md
+          echo "## 🎉 What's New" >> release-notes.md
+          echo "" >> release-notes.md
+          echo "<!-- Add release notes here -->" >> release-notes.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release-notes.md
+          draft: false
+          prerelease: false

@@ -1,0 +1,47 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate PR title
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          if [[ ! "$PR_TITLE" =~ ^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: ]]; then
+            echo "❌ PR title must follow Conventional Commits format"
+            echo "Expected: <type>(<scope>): <description>"
+            echo "Got: $PR_TITLE"
+            exit 1
+          fi
+          echo "✅ PR title is valid: $PR_TITLE"
+
+      - name: Validate PR description
+        run: |
+          if [ -z "${{ github.event.pull_request.body }}" ]; then
+            echo "⚠️ PR description is empty"
+            exit 1
+          fi
+          echo "✅ PR description is present"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest flake8
+
+      - name: Run tests
+        run: pytest tests/ -v
+
+      - name: Lint
+        run: flake8 feddup/ app.py worker.py --max-complexity=10

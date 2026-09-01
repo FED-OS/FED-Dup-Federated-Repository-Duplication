@@ -1,0 +1,34 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: |
+            This issue has been automatically marked as stale because it has not had recent activity.
+            It will be closed if no further activity occurs.
+            Thank you for your contributions to Fed-Dup! 🛡️
+
+          stale-pr-message: |
+            This PR has been automatically marked as stale because it has not had recent activity.
+            It will be closed if no further activity occurs.
+            Thank you for your contributions to Fed-Dup! 🛡️
+
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
+          exempt-issue-labels: 'bug,enhancement,security'
+          exempt-pr-labels: 'dependencies'
+          operations-per-run: 100
