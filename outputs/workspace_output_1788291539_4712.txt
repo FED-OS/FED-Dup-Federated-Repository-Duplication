@@ -1,0 +1,55 @@
+/* ============================================
+   Fed-Dup Landing Page — Stylesheet
+   Modern, animated, glassmorphism design
+   ============================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Brand palette */
+  --grad-1: #667eea;
+  --grad-2: #764ba2;
+  --grad-3: #f093fb;
+  --grad-4: #4facfe;
+  --bg-deep: #0a0b14;
+  --bg-card: rgba(26, 29, 41, 0.7);
+  --bg-card-solid: #1a1d29;
+  --text: #e8e8f0;
+  --text-muted: #9aa0b4;
+  --text-dim: #6b7185;
+  --accent: #00d9a3;
+  --accent-glow: rgba(0, 217, 163, 0.35);
+  --danger: #ff6b6b;
+  --warning: #ffb84d;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-bright: rgba(255, 255, 255, 0.16);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.25);
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+

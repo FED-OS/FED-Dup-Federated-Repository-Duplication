@@ -1,0 +1,31 @@
+total 32
+drwxr-xr-x  2 root root  4096 Sep  1 19:35 .
+drwxr-xr-x 18 user user  4096 Sep  1 19:34 ..
+-rw-r--r--  1 root root 20483 Sep  1 19:35 styles.css
+---CSS EXISTS---
+/* ============================================
+   Fed-Dup Landing Page — Stylesheet
+   Modern, animated, glassmorphism design
+   ============================================ */
+
+---
+ADR.md
+AGENTS.md
+AUTHORS.md
+BUILD.md
+CHANGELOG.md
+CITATIONS.md
+CLAUDE.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+COPYING.md
+DEPLOYMENT.md
+FAQ.md
+GOVERNANCE.md
+INSTALL.md
+MAINTAINERS.md
+NOTICE.md
+PRICING.md
+PULL_REQUEST_TEMPLATE.md
+README.md
+ROADMAP.md

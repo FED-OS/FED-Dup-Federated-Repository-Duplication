@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fed-Dup — A database-free Git mirroring tool that duplicates repositories to a backup host. Built with Python & Streamlit." />
+  <meta property="og:title" content="Fed-Dup — Federated Repository Duplication Engine" />
+  <meta property="og:description" content="A database-free Git mirroring tool. Duplicate repositories to a backup host with Python & Streamlit." />
+  <meta property="og:image" content="social-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="social-image.png" />
+  <title>Fed-Dup — Federated Repository Duplication Engine</title>
+  <link rel="icon" type="image/png" href="../social-image.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+  <!-- Animated background blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        🛡️&nbsp;<span class="grad-text">Fed-Dup</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#docs">Docs</a></li>
+      </ul>
+      <a href="#install" class="btn btn-primary nav-cta">Get Started</a>
+      <button class="nav-burger" id="burger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-badge">🚀 &nbsp;v1.0.0 · Now Generally Available</div>
+      <div class="hero-shield" aria-hidden="true">🛡️</div>
+      <h1>Fed-Dup</h1>
+      <p class="tagline">Federated Repository Duplication Engine</p>
+      <p class="hero-desc">
+        A <strong>database-free Git mirroring tool</strong> that duplicates repositories
+        to a backup host — built with <strong>Python</strong> &amp; <strong>Streamlit</strong>.
+        No databases. No lock-in. Just pure <code>git clone --mirror</code> &amp;
+        <code>git push --mirror</code> power.
+      </p>
+
+      <div class="hero-shields">
+        <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" />
+        <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11+-blue.svg?style=flat-square" />
+        <img alt="Streamlit" src="https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg?style=flat-square" />
+        <img alt="Docker" src="https://img.shields.io/badge/container-Docker-2496ED.svg?style=flat-square" />
+        <img alt="Tests" src="https://img.shields.io/badge/tests-46%20passing-0A9EDC.svg?style=flat-square" />
+        <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square" />
+        <img alt="Lint: flake8" src="https://img.shields.io/badge/lint-flake8-4B8BBE.svg?style=flat-square" />
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#install" class="btn btn-primary">⚡ Quick Start</a>
+        <a href="#features" class="btn btn-secondary">Explore Features</a>
+        <a href="https://ko-fi.com/feddup" target="_blank" rel="noopener" class="btn btn-secondary">☕ Sponsor</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== STATS STRIP ===================== -->
+  <section class="stats-strip reveal">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-number" data-target="96">0</div>
+        <div class="stat-label">Project Files</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="46">0</div>
+        <div class="stat-label">Passing Tests</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="0">0</div>
+        <div class="stat-label">Databases Needed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="16">0</div>
+        <div class="stat-label">CI Workflows</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">% Open Source</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Everything you need to mirror Git repos</h2>
+        <p class="section-sub">
+          A focused, production-ready toolset — no bloat, no databases, no surprises.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🗄️</div>
+          <h3>Database-Free</h3>
+          <p>No SQL, no SQLite, no Postgres. Configuration lives in a simple JSON file that you can version-control, diff, and edit by hand.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🪞</div>
+          <h3>True Git Mirroring</h3>
+          <p>Uses <code>git clone --mirror</code> and <code>git push --mirror</code> to replicate <em>every</em> branch, tag, note, and ref — byte-for-byte fidelity.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔐</div>
+          <h3>Secure Token Injection</h3>
+          <p>Authentication tokens are injected via the <code>https://oauth2:{token}@host</code> URL form — never written to disk, never logged.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎨</div>
+          <h3>Streamlit Web UI</h3>
+          <p>Add, edit, and remove repositories from a clean browser interface. See sync status, results, and disk usage at a glance.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">⚙️</div>
+          <h3>Background Worker</h3>
+          <p>Run a persistent daemon or a one-shot <code>--once</code> mode. Perfect for cron jobs, CI pipelines, and Kubernetes CronJobs.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🛡️</div>
+          <h3>Host Allow-List</h3>
+          <p>Restrict destination hosts to a curated allow-list. Block accidental pushes to untrusted or unknown Git servers.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔏</div>
+          <h3>Token Redaction</h3>
+          <p>Logs, error messages, and exceptions are scrubbed of secrets automatically. Tokens never leak into your observability stack.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📦</div>
+          <h3>Docker-Ready</h3>
+          <p>Ship with a hardened Dockerfile and Docker Compose stack. Persistent volumes, health checks, and non-root execution built in.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔄</div>
+          <h3>Forward-Compatible Config</h3>
+          <p>Older config files are automatically backfilled with sensible defaults when new fields are introduced. No manual migrations.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧪</div>
+          <h3>46 Passing Tests</h3>
+          <p>A comprehensive test suite covers config, engine, utils, token handling, and URL sanitization. Quality is baked in, not bolted on.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧹</div>
+          <h3>Code Quality Gates</h3>
+          <p>Black formatting, flake8 linting, bandit security scanning, and mypy type checks — all enforced in 16 GitHub Actions workflows.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📖</div>
+          <h3>Thoroughly Documented</h3>
+          <p>28 root docs, ADRs, a full wiki, FAQ, deployment guides, and governance — everything an open-source project should ship with.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TERMINAL DEMO ===================== -->
+  <section class="terminal-section-wrap" id="demo">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Live Demo</span>
+        <h2 class="section-title">See it in action</h2>
+        <p class="section-sub">
+          From zero to mirrored in three commands. Watch the terminal below.
+        </p>
+      </div>
+
+      <div class="terminal-section reveal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">fed-dup — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd" id="termLine1"></span></div>
+            <div class="terminal-out" id="termOut1"></div>
+            <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd" id="termLine2"></span></div>
+            <div class="terminal-out" id="termOut2"></div>
+            <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd" id="termLine3"></span></div>
+            <div class="terminal-out" id="termOut3"></div>
+            <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="cursor">&nbsp;</span></div>
+          </div>
+        </div>
+
+        <div class="terminal-info-text">
+          <ul class="terminal-steps">
+            <li>
+              <div class="step-num">1</div>
+              <div class="step-text"><strong>Install</strong><span>Clone the repo and install dependencies in a virtual environment.</span></div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div class="step-text"><strong>Configure</strong><span>Add your source &amp; destination repos via the Streamlit UI or JSON config.</span></div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div class="step-text"><strong>Mirror</strong><span>Run the worker once or as a daemon. Repos sync instantly.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ARCHITECTURE ===================== -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Architecture at a glance</h2>
+        <p class="section-sub">
+          A clean three-stage pipeline: pull from source, store locally, push to destination.
+        </p>
+      </div>
+
+      <div class="arch-diagram reveal">
+        <div class="arch-node arch-node-source">
+          <div class="feature-icon">📥</div>
+          <h3>Source</h3>
+          <p>GitHub · GitLab · Gitea · Bitbucket — any Git host</p>
+        </div>
+
+        <div class="arch-row">
+          <span class="arch-arrow">━━▶</span>
+          <span class="arch-label-flow">git clone --mirror</span>
+        </div>
+
+        <div class="arch-node arch-node-engine">
+          <div class="feature-icon">🛡️</div>
+          <h3>Fed-Dup Engine</h3>
+          <p>Token injection · URL sanitization · Host allow-list · Redaction</p>
+        </div>
+
+        <div class="arch-row">
+          <span class="arch-arrow">━━▶</span>
+          <span class="arch-label-flow">git push --mirror</span>
+        </div>
+
+        <div class="arch-node arch-node-dest">
+          <div class="feature-icon">📤</div>
+          <h3>Destination</h3>
+          <p>Backup host · Bare mirror · Disaster recovery target</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPARISON ===================== -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Comparison</span>
+        <h2 class="section-title">How Fed-Dup compares</h2>
+        <p class="section-sub">
+          A focused tool that does one thing exceptionally well.
+        </p>
+      </div>
+
+      <div class="comparison-wrap reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Fed-Dup</th>
+              <th>Generic Scripts</th>
+              <th>Heavy Platforms</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No database required</td>
+              <td class="yes">✅ Yes</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+            </tr>
+            <tr>
+              <td>Web UI for management</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="yes">✅ Yes</td>
+            </tr>
+            <tr>
+              <td>True <code>--mirror</code> fidelity</td>
+              <td class="yes">✅ Yes</td>
+              <td class="partial">⚠️ Partial</td>
+              <td class="partial">⚠️ Partial</td>
+            </tr>
+            <tr>
+              <td>Secure token injection</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="yes">✅ Yes</td>
+            </tr>
+            <tr>
+              <td>Automatic token redaction</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="partial">⚠️ Partial</td>
+            </tr>
+            <tr>
+              <td>Host allow-list validation</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="yes">✅ Yes</td>
+            </tr>
+            <tr>
+              <td>One-shot <code>--once</code> mode</td>
+              <td class="yes">✅ Yes</td>
+              <td class="partial">⚠️ Partial</td>
+              <td class="partial">⚠️ Partial</td>
+            </tr>
+            <tr>
+              <td>Docker &amp; Compose ready</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="yes">✅ Yes</td>
+            </tr>
+            <tr>
+              <td>Forward-compatible config</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+              <td class="yes">✅ Yes</td>
+            </tr>
+            <tr>
+              <td>Zero external dependencies</td>
+              <td class="yes">✅ Yes</td>
+              <td class="yes">✅ Yes</td>
+              <td class="no">❌ No</td>
+            </tr>
+            <tr>
+              <td>MIT Licensed &amp; free</td>
+              <td class="yes">✅ Yes</td>
+              <td class="partial">⚠️ Varies</td>
+              <td class="no">❌ Often paid</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTALL / CODE ===================== -->
+  <section class="section" id="install">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Quick Start</span>
+        <h2 class="section-title">Get up and running in minutes</h2>
+        <p class="section-sub">
+          Three ways to run Fed-Dup — pick the one that fits your workflow.
+        </p>
+      </div>
+
+      <div class="code-block reveal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">install.sh</span>
+        </div>
+<pre><code><span class="terminal-info-text"># 1 — Clone &amp; enter</span>
+git clone https://github.com/yourname/fed-dup.git
+cd fed-dup
+
+<span class="terminal-info-text"># 2 — Create a virtual environment &amp; install</span>
+python -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install -r requirements.txt
+
+<span class="terminal-info-text"># 3 — Launch the Streamlit web UI</span>
+streamlit run app.py
+<span class="terminal-ok">  → Local URL: http://localhost:8501</span>
+
+<span class="terminal-info-text"># 4 — Run the worker (one-shot mode)</span>
+python worker.py --once
+<span class="terminal-ok">  ✓ Mirrored 3 repositories in 4.2s</span>
+
+<span class="terminal-info-text"># 5 — Or run with Docker Compose</span>
+docker compose up -d
+<span class="terminal-ok">  → Started fed-dup-web &amp; fed-dup-worker</span></code></pre>
+      </div>
+
+      <div class="code-block reveal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">config.json</span>
+        </div>
+<pre><code>{
+  <span class="terminal-warn">"repos"</span>: [
+    {
+      <span class="terminal-warn">"name"</span>: <span class="terminal-ok">"my-app"</span>,
+      <span class="terminal-warn">"source"</span>: <span class="terminal-ok">"https://github.com/me/my-app.git"</span>,
+      <span class="terminal-warn">"destination"</span>: <span class="terminal-ok">"https://backup.example.com/mirrors/my-app.git"</span>
+    }
+  ],
+  <span class="terminal-warn">"allowed_hosts"</span>: [<span class="terminal-ok">"backup.example.com"</span>],
+  <span class="terminal-warn">"sync_interval"</span>: <span class="terminal-prompt">300</span>
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section" id="cta">
+    <div class="container">
+      <div class="cta-section reveal">
+        <h2>Ready to mirror your repos?</h2>
+        <p>Join the federated future. No databases, no lock-in, just clean Git mirroring.</p>
+        <div class="hero-cta-group">
+          <a href="#install" class="btn btn-primary">⚡ Install Fed-Dup</a>
+          <a href="#docs" class="btn btn-secondary">📚 Read the Docs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KO-FI BANNER ===================== -->
+  <section class="kofi-banner reveal">
+    <div class="container kofi-flex">
+      <div class="kofi-text">
+        <span class="kofi-emoji">☕</span>
+        <div>
+          <strong>Support Fed-Dup</strong>
+          <p>Fed-Dup is free and open source forever. If it saves you time, consider buying us a coffee.</p>
+        </div>
+      </div>
+      <a href="https://ko-fi.com/feddup" target="_blank" rel="noopener">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi donation button" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="docs">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="nav-logo">🛡️&nbsp;<span class="grad-text">Fed-Dup</span></div>
+          <p>Federated Repository Duplication Engine — a database-free Git mirroring tool built with Python &amp; Streamlit.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentation</h4>
+          <ul>
+            <li><a href="INSTALL.md">Install Guide</a></li>
+            <li><a href="usage.md">Usage Guide</a></li>
+            <li><a href="DEPLOYMENT.md">Deployment</a></li>
+            <li><a href="FAQ.md">FAQ</a></li>
+            <li><a href="ADR.md">Architecture Decisions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="CONTRIBUTING.md">Contributing</a></li>
+            <li><a href="CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+            <li><a href="GOVERNANCE.md">Governance</a></li>
+            <li><a href="SUPPORT.md">Support</a></li>
+            <li><a href="CHANGELOG.md">Changelog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="LICENSE">License (MIT)</a></li>
+            <li><a href="NOTICE.md">Notices</a></li>
+            <li><a href="ROADMAP.md">Roadmap</a></li>
+            <li><a href="PRICING.md">Sponsorship</a></li>
+            <li><a href="CITATIONS.md">Cite Fed-Dup</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Fed-Dup Contributors · Released under the MIT License</p>
+        <p>Built with 🛡️ using Python, Streamlit &amp; Docker</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    /* ---------- Nav scroll effect ---------- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    /* ---------- Burger menu ---------- */
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      burger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.classList.remove('active');
+      });
+    });
+
+    /* ---------- Smooth scroll ---------- */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* ---------- Scroll reveal (IntersectionObserver) ---------- */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ---------- Animated counters ---------- */
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          let current = 0;
+          const step = Math.max(1, Math.ceil(target / 40));
+          const tick = () => {
+            current += step;
+            if (current >= target) { el.textContent = target + (target === 100 ? '%' : ''); }
+            else { el.textContent = current; requestAnimationFrame(tick); }
+          };
+          tick();
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+    /* ---------- Animated terminal typing ---------- */
+    (function typeTerminal() {
+      const lines = [
+        { cmd: 'pip install -r requirements.txt', out: [
+          { t: '<span class="terminal-ok">✓ Installed streamlit, gitpython, pyyaml</span>', cls: 'terminal-ok' },
+          { t: '<span class="terminal-info-text">  → 12 packages installed in 3.1s</span>', cls: 'terminal-info-text' }
+        ]},
+        { cmd: 'streamlit run app.py', out: [
+          { t: '<span class="terminal-ok">  → Local URL: http://localhost:8501</span>', cls: 'terminal-ok' },
+          { t: '<span class="terminal-info-text">  → Network URL: http://192.168.1.5:8501</span>', cls: 'terminal-info-text' }
+        ]},
+        { cmd: 'python worker.py --once', out: [
+          { t: '<span class="terminal-ok">  ✓ Cloned  my-app        → backup.example.com</span>', cls: 'terminal-ok' },
+          { t: '<span class="terminal-ok">  ✓ Pushed  my-app        → mirror complete</span>', cls: 'terminal-ok' },
+          { t: '<span class="terminal-warn">  ⚠ Disk usage: 42% (8.4 GB / 20 GB)</span>', cls: 'terminal-warn' },
+          { t: '<span class="terminal-ok">  ✓ Mirrored 3 repositories in 4.2s</span>', cls: 'terminal-ok' }
+        ]}
+      ];
+
+      let li = 0;
+      function typeLine() {
+        if (li >= lines.length) return;
+        const line = lines[li];
+        const cmdEl = document.getElementById('termLine' + (li + 1));
+        const outEl = document.getElementById('termOut' + (li + 1));
+        if (!cmdEl) return;
+        let ci = 0;
+        function typeChar() {
+          if (ci < line.cmd.length) {
+            cmdEl.textContent += line.cmd[ci];
+            ci++;
+            setTimeout(typeChar, 28 + Math.random() * 30);
+          } else {
+            setTimeout(() => {
+              line.out.forEach((o, idx) => {
+                setTimeout(() => {
+                  const div = document.createElement('div');
+                  div.innerHTML = o.t;
+                  outEl.appendChild(div);
+                }, idx * 250);
+              });
+              li++;
+              setTimeout(typeLine, 700);
+            }, 300);
+          }
+        }
+        typeChar();
+      }
+      // Start typing after the demo section is visible
+      const demo = document.getElementById('demo');
+      const demoObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          typeLine();
+          demoObserver.disconnect();
+        }
+      }, { threshold: 0.3 });
+      demoObserver.observe(demo);
+    })();
+  </script>
+</body>
+</html>

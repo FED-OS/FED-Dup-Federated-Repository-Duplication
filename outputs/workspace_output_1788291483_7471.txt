@@ -1,0 +1,113 @@
+.terminal-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.terminal {
+  background: #0d0e16;
+  border: 1px solid var(--border-bright);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow), var(--shadow-glow);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+  background: #16171f;
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.terminal-dot.red { background: #ff5f57; }
+.terminal-dot.yellow { background: #febc2e; }
+.terminal-dot.green { background: #28c840; }
+.terminal-title {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+.terminal-body {
+  padding: 1.25rem;
+  line-height: 1.8;
+  min-height: 320px;
+}
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.terminal-prompt { color: var(--accent); }
+.terminal-cmd { color: #e8e8f0; }
+.terminal-out { color: var(--text-muted); }
+.terminal-ok { color: #28c840; }
+.terminal-info { color: var(--grad-4); }
+.terminal-warn { color: var(--warning); }
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-info-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.terminal-info-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+.terminal-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.terminal-steps li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--grad-1), var(--grad-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+.step-text strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.step-text span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Architecture Diagram ---------- */
+.arch-diagram {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);

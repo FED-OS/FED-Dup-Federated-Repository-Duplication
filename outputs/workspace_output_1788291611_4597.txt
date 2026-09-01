@@ -1,0 +1,7 @@
+root         661  0.0  0.5  26536 20180 ?        S    19:32   0:00 python browser_server.py start --foreground
+root         663  2.0  1.0  51348 44360 ?        S    19:32   0:09 python /app/server.py
+---PORTS---
+LISTEN 0      4096       127.0.0.1:18080      0.0.0.0:*    users:(("psiphon-tunnel-",pid=660,fd=7))                                    
+LISTEN 0      4096       127.0.0.1:18081      0.0.0.0:*    users:(("psiphon-tunnel-",pid=660,fd=6))                                    
+LISTEN 0      100          0.0.0.0:6080       0.0.0.0:*    users:(("python3",pid=927,fd=3))                                            
+LISTEN 0      2048         0.0.0.0:8080       0.0.0.0:*    users:(("python",pid=754,fd=3),("python",pid=663,fd=3))                     

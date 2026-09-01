@@ -1,0 +1,6 @@
+total 1716
+drwxr-xr-x  2 root root    4096 Sep  1 19:39 .
+drwxr-xr-x 18 user user    4096 Sep  1 19:34 ..
+-rw-r--r--  1 root root   26990 Sep  1 19:39 index.html
+-rw-r--r--  1 root root 1695612 Sep  1 19:39 social-image.png
+-rw-r--r--  1 root root   22357 Sep  1 19:39 styles.css

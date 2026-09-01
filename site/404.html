@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Fed-Dup</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-code {
+      font-size: clamp(5rem, 18vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #4facfe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 40px rgba(102, 126, 234, 0.4));
+    }
+    .error-title {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .error-msg {
+      color: #9aa0b4;
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <main class="error-page">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🛡️</div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Repository not mirrored... yet</h1>
+    <p class="error-msg">
+      The page you're looking for doesn't exist or has been moved.
+      Let's get you back to safe harbor.
+    </p>
+    <a href="index.html" class="btn btn-primary">⬅ Back to Fed-Dup</a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,4 @@
+index.html: HTTP 000 | 0 bytes
+styles.css: HTTP 000 | 0 bytes
+---LOG---
+cat: /tmp/site-server.log: No such file or directory

@@ -1,0 +1,14 @@
+        <div class="stat-number" data-target="96">0</div>
+        <div class="stat-label">Project Files</div>
+--
+        <div class="stat-number" data-target="46">0</div>
+        <div class="stat-label">Passing Tests</div>
+--
+        <div class="stat-number" data-target="0">0</div>
+        <div class="stat-label">Databases Needed</div>
+--
+        <div class="stat-number" data-target="16">0</div>
+        <div class="stat-label">CI Workflows</div>
+--
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">% Open Source</div>

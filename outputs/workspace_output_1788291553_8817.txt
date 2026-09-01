@@ -1,0 +1,16 @@
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+===CHECK hero-shield img usage===
+45:      <a href="#install" class="btn btn-primary nav-cta">Get Started</a>
+76:      <div class="hero-cta-group">
+446:  <section class="cta-section reveal" id="cta">
+450:      <div class="hero-cta-group">

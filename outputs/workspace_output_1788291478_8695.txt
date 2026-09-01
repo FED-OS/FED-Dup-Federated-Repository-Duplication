@@ -1,0 +1,25 @@
+356:.section-header {
+360:.section-tag {
+373:.section-title {
+379:.section-title .grad {
+385:.section-sub {
+393:.stats-strip {
+407:.stat-item {
+410:.stat-number {
+419:.stat-label {
+488:.terminal-section {
+537:.terminal-info { color: var(--grad-4); }
+553:.terminal-info-text h2 {
+558:.terminal-info-text p {
+563:.terminal-steps {
+569:.terminal-steps li {
+574:.step-num {
+587:.step-text strong {
+591:.step-text span {
+710:.code-block {
+722:.code-block .kw { color: #c792ea; }
+723:.code-block .str { color: #c3e88d; }
+724:.code-block .num { color: #f78c6c; }
+725:.code-block .comment { color: var(--text-dim); font-style: italic; }
+726:.code-block .fn { color: var(--grad-4); }
+903:  .stats-strip {

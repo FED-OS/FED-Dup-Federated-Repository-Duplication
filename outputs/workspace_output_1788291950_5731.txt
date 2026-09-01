@@ -1,0 +1,13 @@
+total 1724
+drwxr-xr-x  2 root root    4096 Sep  1 19:45 .
+drwxr-xr-x 19 user user    4096 Sep  1 19:41 ..
+-rw-r--r--  1 root root       0 Sep  1 19:45 .nojekyll
+-rw-r--r--  1 root root    2055 Sep  1 19:45 404.html
+-rw-r--r--  1 root root    3024 Sep  1 19:45 README.md
+-rw-r--r--  1 root root   26990 Sep  1 19:39 index.html
+-rw-r--r--  1 root root 1695612 Sep  1 19:39 social-image.png
+-rw-r--r--  1 root root   22357 Sep  1 19:39 styles.css
+lrwxrwxrwx  1 root root      15 Sep  1 19:32 todo.md -> /proc/self/fd/0
+---404 CHECK---
+404.html: HTTP 200 | 2055 bytes
+social-image.png: HTTP 200 | 1695612 bytes
