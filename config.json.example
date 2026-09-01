@@ -1,0 +1,16 @@
+{
+  "github_token": "ghp_your_personal_access_token",
+  "backup_token": "glpat_your_backup_platform_token",
+  "repositories": [
+    {
+      "name": "my-cool-project",
+      "source": "https://github.com/yourname/my-cool-project.git",
+      "destination": "https://gitlab.com/yourname/my-cool-project.git"
+    }
+  ],
+  "settings": {
+    "auto_sync_interval": 3600,
+    "cleanup_after_sync": false,
+    "max_parallel_syncs": 3
+  }
+}

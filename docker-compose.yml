@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  feddup:
+    build: .
+    container_name: feddup
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./config.json:/app/config.json
+      - ./feddup_workspace:/app/feddup_workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+      - TZ=UTC
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

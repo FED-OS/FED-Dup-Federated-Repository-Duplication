@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fed-Dup - Federated Repository Duplication Engine</title>
+    <style>
+        :root {
+            --grad-start: #667eea;
+            --grad-end: #764ba2;
+            --bg: #0f1117;
+            --card: #1a1d29;
+            --text: #e6e6e6;
+            --muted: #9aa0b4;
+            --accent: #00cc88;
+            --danger: #ff6b6b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .hero {
+            text-align: center;
+            max-width: 720px;
+            margin: 2rem 0;
+        }
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline { color: var(--muted); font-size: 1.2rem; margin-top: 0.5rem; }
+        .shields { margin: 1.5rem 0; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+        .shields img { height: 28px; }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1rem 0;
+            max-width: 720px;
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .card h2 { color: var(--grad-start); margin-bottom: 0.75rem; }
+        .features { list-style: none; display: grid; gap: 0.6rem; }
+        .features li { display: flex; align-items: center; gap: 0.5rem; }
+        .check { color: var(--accent); font-weight: 700; }
+        a.btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        a.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+        code { background: rgba(255,255,255,0.08); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9rem; }
+        .kofi { margin-top: 1.5rem; }
+        footer { color: var(--muted); margin-top: 2rem; font-size: 0.9rem; }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="hero">
+        <h1>🛡️ Fed-Dup</h1>
+        <p class="tagline">Federated Repository Duplication Engine</p>
+        <div class="shields">
+            <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
+            <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9+-blue.svg">
+            <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-1.28-red.svg">
+            <img alt="Docker" src="https://img.shields.io/badge/Docker-Enabled-blue.svg">
+        </div>
+        <a class="btn" href="https://github.com/yourusername/fed-dup">View on GitHub →</a>
+    </div>
+
+    <div class="card">
+        <h2>What is Fed-Dup?</h2>
+        <p>Fed-Dup is a lightweight, dependency-free tool that duplicates your Git repositories to a secondary platform. Think of it as an insurance policy for your code. If GitHub ever goes down, your repositories are already mirrored on GitLab, Codeberg, or any Git server you choose.</p>
+    </div>
+
+    <div class="card">
+        <h2>Key Features</h2>
+        <ul class="features">
+            <li><span class="check">✓</span> Full mirror duplication — all branches, tags, and history</li>
+            <li><span class="check">✓</span> Beautiful Streamlit web UI for management</li>
+            <li><span class="check">✓</span> Automatic background sync on a configurable interval</li>
+            <li><span class="check">✓</span> Optional disk cleanup after each sync</li>
+            <li><span class="check">✓</span> Docker &amp; Docker Compose ready — deploy in one command</li>
+            <li><span class="check">✓</span> Secure — tokens stored locally, never logged</li>
+            <li><span class="check">✓</span> No database — everything in a single JSON file</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Quick Start</h2>
+        <p>Clone, configure, and run:</p>
+        <pre style="background:#000;padding:1rem;border-radius:8px;overflow:auto;margin-top:0.75rem;color:#e6e6e6"><code>git clone https://github.com/yourusername/fed-dup
+cd fed-dup
+cp config.json.example config.json   # then edit with your tokens
+docker-compose up -d</code></pre>
+        <p style="margin-top:0.75rem">Then open <code>http://localhost:8501</code>.</p>
+    </div>
+
+    <div class="kofi">
+        <a href='https://ko-fi.com/YOUR_USERNAME' target='_blank' rel='noopener'>
+            <img height='36' style='border:0px;height:36px;' src='https://ko-fi.com/img/githubbutton_sm.svg' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+        </a>
+    </div>
+
+    <footer>
+        Built with ❤️ for the open source community · MIT License · v1.0.0
+    </footer>
+</body>
+</html>
