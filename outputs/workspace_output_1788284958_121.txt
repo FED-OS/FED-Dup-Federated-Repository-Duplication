@@ -1,0 +1,11 @@
+  adding: fed-dup/config.json (deflated 36%)
+  adding: fed-dup/CLAUDE.md (deflated 48%)
+  adding: fed-dup/feature_request.md (deflated 49%)
+  adding: fed-dup/README.md (deflated 56%)
+  adding: fed-dup/SUMMARY.md (deflated 58%)
+=== ZIP CREATED ===
+-rw-r--r-- 1 root root 1.6M Sep  1 17:49 /workspace/fed-dup.zip
+=== ZIP CONTENTS COUNT ===
+     7214  2026-09-01 17:44   fed-dup/SUMMARY.md
+---------                     -------
+  2042128                     106 files

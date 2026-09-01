@@ -1,0 +1,20 @@
+=================================== FAILURES ===================================
+_______________ TestSanitizeGitUrl.test_no_protocol_after_strip ________________
+
+self = <tests.test_utils.TestSanitizeGitUrl object at 0x7ff7936cabd0>
+
+    def test_no_protocol_after_strip(self):
+        # The regex strips everything before @, leaving a host-path
+        url = "oauth2:ghp_secret@github.com/user/repo"
+        result = sanitize_git_url(url)
+>       assert result == "github.com/user/repo.git"
+E       AssertionError: assert 'https://gith...user/repo.git' == 'github.com/user/repo.git'
+E         
+E         - github.com/user/repo.git
+E         + https://github.com/user/repo.git
+E         ? ++++++++
+
+tests/test_utils.py:44: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_utils.py::TestSanitizeGitUrl::test_no_protocol_after_strip
+========================= 1 failed, 45 passed in 0.57s =========================

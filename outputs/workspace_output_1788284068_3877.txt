@@ -1,0 +1,21 @@
+[notice] To update, run: pip install --upgrade pip
+OK  .github/workflows/build.yml
+OK  .github/workflows/cd.yml
+OK  .github/workflows/ci.yml
+OK  .github/workflows/codeql.yml
+OK  .github/workflows/dependency-review.yml
+OK  .github/workflows/deploy.yml
+OK  .github/workflows/greetings.yml
+OK  .github/workflows/labeler.yml
+OK  .github/workflows/main.yml
+OK  .github/workflows/pages.yml
+OK  .github/workflows/pr.yml
+OK  .github/workflows/publish.yml
+OK  .github/workflows/release.yml
+OK  .github/workflows/scorecards.yml
+OK  .github/workflows/stale.yml
+OK  .github/workflows/test.yml
+OK  .github/dependabot.yml
+OK  .github/labeler.yml
+OK  docker-compose.yml
+bad: 0

@@ -1,0 +1,15 @@
+tests/test_utils.py::TestValidateSourceUrl::test_empty_rejected PASSED   [ 73%]
+tests/test_utils.py::TestValidateDestinationUrl::test_valid_https_git PASSED [ 76%]
+tests/test_utils.py::TestValidateDestinationUrl::test_missing_git_suffix PASSED [ 78%]
+tests/test_utils.py::TestValidateDestinationUrl::test_http_rejected PASSED [ 80%]
+tests/test_utils.py::TestValidateDestinationUrl::test_empty_rejected PASSED [ 82%]
+tests/test_utils.py::TestCleanupWorkspace::test_removes_existing_repo PASSED [ 84%]
+tests/test_utils.py::TestCleanupWorkspace::test_missing_repo_returns_false PASSED [ 86%]
+tests/test_utils.py::TestGetRepoSize::test_size_positive PASSED          [ 89%]
+tests/test_utils.py::TestGetRepoSize::test_missing_repo_zero PASSED      [ 91%]
+tests/test_utils.py::TestHumanizeSize::test_zero PASSED                  [ 93%]
+tests/test_utils.py::TestHumanizeSize::test_bytes PASSED                 [ 95%]
+tests/test_utils.py::TestHumanizeSize::test_kilobytes PASSED             [ 97%]
+tests/test_utils.py::TestHumanizeSize::test_megabytes PASSED             [100%]
+
+============================== 46 passed in 0.57s ==============================

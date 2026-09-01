@@ -1,0 +1,4 @@
+worker.py:18:15: F821 undefined name 'Path'
+EXIT: 1
+---app.py (E402 expected for Streamlit)---
+EXIT: 0

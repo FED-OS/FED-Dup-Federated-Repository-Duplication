@@ -1,0 +1,19 @@
+discussion/:
+total 8
+drwxr-xr-x  2 root root 4096 Sep  1 17:31 .
+drwxr-xr-x 17 user user 4096 Sep  1 17:45 ..
+
+docs/:
+total 8
+drwxr-xr-x  2 root root 4096 Sep  1 17:31 .
+drwxr-xr-x 17 user user 4096 Sep  1 17:45 ..
+
+prompts/:
+total 8
+drwxr-xr-x  2 root root 4096 Sep  1 17:31 .
+drwxr-xr-x 17 user user 4096 Sep  1 17:45 ..
+
+wiki/:
+total 8
+drwxr-xr-x  2 root root 4096 Sep  1 17:31 .
+drwxr-xr-x 17 user user 4096 Sep  1 17:45 ..

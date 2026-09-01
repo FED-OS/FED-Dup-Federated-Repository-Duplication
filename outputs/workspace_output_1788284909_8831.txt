@@ -1,0 +1,10 @@
+=== PYTEST ===
+..............................................                           [100%]
+46 passed in 0.54s
+=== FLAKE8 (all, E402 ignored for app.py) ===
+flake8 core EXIT: 0
+flake8 app EXIT: 0
+=== BLACK ===
+All done! ✨ 🍰 ✨
+11 files would be left unchanged.
+black EXIT: 0

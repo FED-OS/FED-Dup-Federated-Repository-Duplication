@@ -1,0 +1,13 @@
+tests/test_engine.py
+          4,888 100%  795.57kB/s    0:00:00            4,888 100%  795.57kB/s    0:00:00 (xfr#94, to-chk=2/106)
+tests/test_utils.py
+          4,478 100%  728.84kB/s    0:00:00            4,478 100%  728.84kB/s    0:00:00 (xfr#95, to-chk=1/106)
+wiki/
+wiki/Home.md
+          4,502 100%  732.75kB/s    0:00:00            4,502 100%  732.75kB/s    0:00:00 (xfr#96, to-chk=0/106)
+
+sent 2,049,653 bytes  received 1,950 bytes  4,103,206.00 bytes/sec
+total size is 2,042,128  speedup is 1.00
+=== PACKAGE CONTENTS ===
+96
+files in package

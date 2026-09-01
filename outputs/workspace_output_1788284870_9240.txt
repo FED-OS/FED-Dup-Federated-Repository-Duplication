@@ -1,0 +1,11 @@
+would reformat /workspace/feddup/engine.py
+would reformat /workspace/feddup/utils.py
+would reformat /workspace/tests/test_config.py
+would reformat /workspace/tests/test_engine.py
+would reformat /workspace/tests/test_utils.py
+would reformat worker.py
+would reformat app.py
+
+Oh no! 💥 💔 💥
+7 files would be reformatted, 4 files would be left unchanged.
+EXIT: 1

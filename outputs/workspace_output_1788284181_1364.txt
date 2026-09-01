@@ -1,0 +1,76 @@
+# Fed-Dup Build Plan
+
+## Core Python Package
+- [x] Create feddup/__init__.py, engine.py, config.py, utils.py, logger.py
+- [x] Create app.py (Streamlit UI) and worker.py (background sync)
+- [x] Create tests/ (test_engine.py, test_config.py, test_utils.py, __init__.py)
+
+## Config & Deployment
+- [x] Create requirements.txt, config.json.example, .env.example
+- [x] Create .gitignore, .dockerignore, Dockerfile, docker-compose.yml
+- [x] Create styles.css, index.html
+- [x] Generate social-image.png
+
+## GitHub Templates & Workflows
+- [x] .github/DISCUSSION_WELCOME_README.md, PULL_REQUEST_TEMPLATE.md
+- [x] .github/ISSUE_TEMPLATE/ (bug_report, feature_request, custom)
+- [x] .github/workflows/ (16 workflows: build, test, ci, cd, deploy, release, publish, pr, stale, labeler, greetings, codeql, main, pages, dependency-review, scorecards)
+- [x] .github/labeler.yml, .github/dependabot.yml, CODEOWNERS
+
+## Root Docs
+- [ ] CLAUDE.md, AGENTS.md, AUTHORS.md, MAINTAINERS.md
+- [ ] SECURITY.md, LICENSE, README.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md
+- [ ] CHANGELOG.md, FAQ.md, NOTICE.md, SUPPORT.md, usage.md
+- [ ] INSTALL.md, BUILD.md, DEPLOYMENT.md, ROADMAP.md, ADR.md, SUMMARY.md
+- [ ] todo.md (root), PRICING.md, COPYING.md, CITATIONS.md, GOVERNANCE.md
+- [ ] PULL_REQUEST_TEMPLATE.md (root), bug_report.md (root), feature_request.md (root)
+
+## Docs Directory
+- [ ] docs/ (ADR, ROADMAP, DEPLOYMENT, BUILD, INSTALL, SUMMARY, todo, PRICING, COPYING, CITATIONS, GOVERNANCE, SUPPORT, CODE_OF_CONDUCT, CONTRIBUTING, usage, CHANGELOG, FAQ, NOTICE)
+
+## Misc Directories
+- [ ] prompts/README.md, wiki/Home.md, discussion/README.md
+
+## Verification & Packaging
+- [ ] Run pytest to verify tests pass
+- [ ] Run flake8/black to verify code style
+- [ ] Test app.py imports and runs
+- [ ] Create complete tree output
+- [ ] Package everything and verify
+---SEPARATOR---
+total 1800
+drwxr-xr-x 17 user user    4096 Sep  1 17:36 .
+drwxr-xr-x 20 root root    4096 Jun 22 03:39 ..
+drwxr-xr-x  4 user user    4096 Jun 19 10:20 .agent_hooks
+drwxr-xr-x 10 root root    4096 Sep  1 17:27 .browser_data
+-rw-r--r--  1 root root     295 Sep  1 17:28 .dockerignore
+-rw-r--r--  1 root root     678 Sep  1 17:28 .env.example
+drwxr-xr-x  4 root root    4096 Sep  1 17:34 .github
+-rw-r--r--  1 root root     436 Sep  1 17:28 .gitignore
+drwxr-xr-x  3 root root    4096 Jun 22 03:37 .psiphon_data
+drwxr-xr-x  3 root root    4096 Sep  1 17:26 .pytest_cache
+-rw-r--r--  1 root root    1899 Sep  1 17:35 AGENTS.md
+-rw-r--r--  1 root root     808 Sep  1 17:35 AUTHORS.md
+-rw-r--r--  1 root root    2281 Sep  1 17:34 CLAUDE.md
+-rw-r--r--  1 root root    1227 Sep  1 17:28 Dockerfile
+-rw-r--r--  1 root root    2507 Sep  1 17:35 MAINTAINERS.md
+drwxr-xr-x  2 root root    4096 Sep  1 17:27 __pycache__
+-rw-r--r--  1 root root    7962 Sep  1 17:25 app.py
+-rw-r--r--  1 root root     204 Sep  1 17:27 config.json
+-rw-r--r--  1 root root     431 Sep  1 17:27 config.json.example
+drwxr-xr-x  2 root root    4096 Sep  1 17:31 discussion
+-rw-r--r--  1 root root     519 Sep  1 17:28 docker-compose.yml
+drwxr-xr-x  2 root root    4096 Sep  1 17:31 docs
+drwxr-xr-x  3 root root    4096 Sep  1 17:26 feddup
+drwxr-xr-x  2 root root    4096 Sep  1 17:30 generated_images
+-rw-r--r--  1 root root    5601 Sep  1 17:29 index.html
+drwxr-xr-x  2 root root    4096 Sep  1 17:36 outputs
+drwxr-xr-x  2 root root    4096 Sep  1 17:31 prompts
+-rw-r--r--  1 root root      18 Sep  1 17:27 requirements.txt
+-rw-r--r--  1 root root 1695612 Sep  1 17:31 social-image.png
+-rw-r--r--  1 root root    3853 Sep  1 17:29 styles.css
+drwxr-xr-x  2 root root    4096 Sep  1 17:36 summarized_conversations
+drwxr-xr-x  3 root root    4096 Sep  1 17:26 tests
+-rw-r--r--  1 root root    1835 Sep  1 17:34 todo.md
+drwxr-xr-x  2 root root    4096 Sep  1 17:31 wiki
+-rw-r--r--  1 root root    2080 Sep  1 17:25 worker.py

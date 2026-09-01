@@ -1,0 +1,50 @@
+INFO     feddup.engine:engine.py:97 📤 Pushing demo to backup destination
+INFO     feddup.engine:engine.py:105 ✅ Fed-Dup completed: demo
+_____________ TestSanitizeGitUrl.test_strips_embedded_credentials ______________
+
+self = <tests.test_utils.TestSanitizeGitUrl object at 0x7f5c9a15be10>
+
+    def test_strips_embedded_credentials(self):
+        url = "https://oauth2:ghp_secret@github.com/user/repo.git"
+>       assert sanitize_git_url(url) == "https://github.com/user/repo.git"
+E       AssertionError: assert 'github.com/user/repo.git' == 'https://gith...user/repo.git'
+E         
+E         - https://github.com/user/repo.git
+E         ? --------
+E         + github.com/user/repo.git
+
+tests/test_utils.py:27: AssertionError
+_____________ TestSanitizeGitUrl.test_strips_user_pass_credentials _____________
+
+self = <tests.test_utils.TestSanitizeGitUrl object at 0x7f5c9a15bbd0>
+
+    def test_strips_user_pass_credentials(self):
+        url = "https://user:pass@github.com/user/repo.git"
+>       assert sanitize_git_url(url) == "https://github.com/user/repo.git"
+E       AssertionError: assert 'github.com/user/repo.git' == 'https://gith...user/repo.git'
+E         
+E         - https://github.com/user/repo.git
+E         ? --------
+E         + github.com/user/repo.git
+
+tests/test_utils.py:31: AssertionError
+_________________ TestSanitizeGitUrl.test_strips_bare_token_at _________________
+
+self = <tests.test_utils.TestSanitizeGitUrl object at 0x7f5c9a159c90>
+
+    def test_strips_bare_token_at(self):
+        url = "https://ghp_secret@github.com/user/repo.git"
+>       assert sanitize_git_url(url) == "https://github.com/user/repo.git"
+E       AssertionError: assert 'github.com/user/repo.git' == 'https://gith...user/repo.git'
+E         
+E         - https://github.com/user/repo.git
+E         ? --------
+E         + github.com/user/repo.git
+
+tests/test_utils.py:35: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_engine.py::TestCleanup::test_no_cleanup_keeps_repo_dir - As...
+FAILED tests/test_utils.py::TestSanitizeGitUrl::test_strips_embedded_credentials
+FAILED tests/test_utils.py::TestSanitizeGitUrl::test_strips_user_pass_credentials
+FAILED tests/test_utils.py::TestSanitizeGitUrl::test_strips_bare_token_at - A...
+========================= 4 failed, 42 passed in 0.71s =========================

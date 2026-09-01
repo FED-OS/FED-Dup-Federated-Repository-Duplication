@@ -1,0 +1,10 @@
+{
+    "github_token": "",
+    "backup_token": "",
+    "repositories": [],
+    "settings": {
+        "auto_sync_interval": 3600,
+        "cleanup_after_sync": false,
+        "max_parallel_syncs": 3
+    }
+}

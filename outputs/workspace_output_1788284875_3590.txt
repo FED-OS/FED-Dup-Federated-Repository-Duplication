@@ -1,0 +1,56 @@
+"""Unit tests for feddup.config"""
+
+import json
+import shutil
+from pathlib import Path
+
+import pytest
+
+import feddup.config as config_module
+from feddup.config import (
+    load_config,
+    save_config,
+    add_repository,
+    remove_repository,
+    get_repository_count,
+---
+"""Unit tests for feddup.engine
+
+These tests avoid real network/Git operations by monkeypatching
+``subprocess.run`` and the workspace directory. The goal is to verify the
+control flow, validation, token redaction, and cleanup behaviour.
+"""
+
+import subprocess
+from pathlib import Path
+from unittest.mock import patch
+
+import pytest
+
+import feddup.engine as engine_module
+from feddup.engine import duplicate_repository
+---
+"""Unit tests for feddup.utils"""
+
+import os
+import shutil
+import tempfile
+from pathlib import Path
+
+from feddup.utils import (
+---
+"""
+Fed-Dup Background Worker
+Runs on a schedule to sync repositories automatically without the UI.
+
+Usage:
+    python worker.py            # uses interval from config.json
+    python worker.py --once     # single sync then exit (great for cron/CI)
+"""
+
+import argparse
+import json
+import time
+from pathlib import Path
+
+from feddup.config import load_config

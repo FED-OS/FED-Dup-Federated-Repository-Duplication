@@ -1,0 +1,17 @@
+=== feddup package import ===
+feddup version: 1.0.0
+exports: ['add_repository', 'cleanup_workspace', 'config', 'duplicate_repository', 'engine', 'get_logger', 'get_repo_size', 'get_repository_count', 'load_config', 'logger', 'remove_repository', 'sanitize_git_url', 'save_config', 'utils', 'validate_destination_url', 'validate_source_url']
+=== app.py import test ===
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+2026-09-01 17:48:36.910 Uvicorn server started on :::8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.16.18.241:8501
+  External URL: http://52.12.117.99:8501
+
+  Stopping...
+APP_TEST_DONE

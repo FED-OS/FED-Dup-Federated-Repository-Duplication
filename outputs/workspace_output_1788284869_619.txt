@@ -1,0 +1,9 @@
+app.py:14:1: E402 module level import not at top of file
+app.py:22:1: E402 module level import not at top of file
+app.py:23:1: E402 module level import not at top of file
+tests/test_config.py:4:1: F401 'shutil' imported but unused
+tests/test_config.py:5:1: F401 'pathlib.Path' imported but unused
+tests/test_engine.py:9:1: F401 'pathlib.Path' imported but unused
+tests/test_utils.py:3:1: F401 'os' imported but unused
+worker.py:11:1: F401 'json' imported but unused
+EXIT: 1
