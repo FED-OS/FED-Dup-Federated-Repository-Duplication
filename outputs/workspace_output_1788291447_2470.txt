@@ -1,0 +1,44 @@
+56:/* Animated background blobs */
+57:.bg-blobs {
+64:.blob {
+69:  animation: float-blob 20s ease-in-out infinite;
+71:.blob:nth-child(1) {
+78:.blob:nth-child(2) {
+86:.blob:nth-child(3) {
+94:.blob:nth-child(4) {
+103:@keyframes float-blob {
+135:.nav.scrolled {
+213:.nav-burger {
+220:.nav-burger span {
+227:.nav-burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+228:.nav-burger.open span:nth-child(2) { opacity: 0; }
+229:.nav-burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+232:.hero {
+241:.hero-badge {
+255:.hero-badge .pulse-dot {
+262:.hero-shield {
+268:.hero h1 {
+280:.hero .tagline {
+288:.hero-shields {
+296:.hero-shields img {
+301:.hero-shields img:hover {
+304:.hero-cta-group {
+615:.arch-node {
+625:.arch-node:hover {
+630:.arch-node .arch-icon {
+634:.arch-node .arch-label {
+638:.arch-node .arch-sub {
+643:.arch-node.source { border-color: rgba(0, 217, 163, 0.4); }
+644:.arch-node.source .arch-icon { filter: drop-shadow(0 0 8px rgba(0, 217, 163, 0.5)); }
+645:.arch-node.engine { border-color: rgba(102, 126, 234, 0.4); }
+646:.arch-node.engine .arch-icon { filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.5)); }
+647:.arch-node.dest { border-color: rgba(240, 147, 251, 0.4); }
+648:.arch-node.dest .arch-icon { filter: drop-shadow(0 0 8px rgba(240, 147, 251, 0.5)); }
+705:.comparison-table .yes { color: var(--accent); font-weight: 700; }
+706:.comparison-table .no { color: var(--danger); font-weight: 700; }
+707:.comparison-table .partial { color: var(--warning); font-weight: 700; }
+769:.kofi-banner {
+773:.kofi-banner img {
+777:.kofi-banner img:hover {
+893:  .nav-links.open {
+896:  .nav-burger {

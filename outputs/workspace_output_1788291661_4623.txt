@@ -1,0 +1,20 @@
+  [17] a "Deployment" -> DEPLOYMENT.md
+  [18] a "FAQ" -> FAQ.md
+  [19] a "Architecture Decisions" -> ADR.md
+  [20] a "Contributing" -> CONTRIBUTING.md
+  [21] a "Code of Conduct" -> CODE_OF_CONDUCT.md
+  [22] a "Governance" -> GOVERNANCE.md
+  [23] a "Support" -> SUPPORT.md
+  [24] a "Changelog" -> CHANGELOG.md
+  [25] a "License (MIT)" -> LICENSE
+  [26] a "Notices" -> NOTICE.md
+  [27] a "Roadmap" -> ROADMAP.md
+  [28] a "Sponsorship" -> PRICING.md
+  [29] a "Cite Fed-Dup" -> CITATIONS.md
+
+Accessibility tree:
+Page text: 🛡️ Fed-Dup Features Demo Architecture Compare Install Docs Get Started 🚀 v1.0.0 · Now Generally Available 🛡️ Fed-Dup Federated Repository Duplication Engine A database-free Git mirroring tool that duplicates repositories to a backup host — built with Python & Streamlit. No databases. No lock-in. Just pure git clone --mirror & git push --mirror power. ⚡ Quick Start Explore Features ☕ Sponsor 0 PROJECT FILES 0 PASSING TESTS 0 DATABASES NEEDED 0 CI WORKFLOWS 0 % OPEN SOURCE CAPABILITIES Everything you need to mirror Git repos A focused, production-ready toolset — no bloat, no databases, no surprises. 🗄️ Database-Free No SQL, no SQLite, no Postgres. Configuration lives in a simple JSON file that you can version-control, diff, and edit by hand. 🪞 True Git Mirroring Uses git clone --mirror and git push --mirror to replicate every branch, tag, note, and ref — byte-for-byte fidelity. 🔐 Secure Token Injection Authentication tokens are injected via the https://oauth2:{token}@host URL form — never written to disk, never logged. 🎨 Streamlit Web UI Add, edit, and remove repositories from a clean browser interface. See sync status, results, and disk usage at a glance. ⚙️ Background Worker Run a persistent daemon or a one-shot --once mode. Perfect for cron jobs, CI pipelines, and Kubernetes CronJobs. 🛡️ Host Allow-List Restrict destination hosts to a curated allow-list. Block accidental pushes to untrusted or unknown Git servers. 🔏 Token Redaction Logs, error messages, and exceptions are scrubbed of secrets automatically. Tokens never leak into your observability stack. 📦 Docker-Ready Ship with a hardened Dockerfile and Docker Compose stack. Persistent volumes, health checks, and non-root execution built in. 🔄 Forward-Compatible Config Older config files are automatically backfilled with sensible defaults when new fields are introduced. No manual migrations. 🧪 46 Passing Tests A comprehensive test suite covers config, engine, utils, token handling, and URL sanitization. Quality is
+
+Screenshot: /workspace/.screenshots/step_000.png
+Use see-image to view: /workspace/.screenshots/step_000.png
+=== END ===

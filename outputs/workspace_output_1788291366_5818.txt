@@ -1,0 +1,18 @@
+@keyframes float-blob
+@keyframes blink
+@keyframes arrow-pulse
+@keyframes rotate-bg
+@keyframes fade-up
+@keyframes fade-down
+@keyframes float-shield
+@keyframes pulse
+---IDS---
+#c3e88d
+#c792ea
+#e8e8f0
+#f093fb
+#f78c6c
+#febc2e
+#ff5f57
+#ff6b6b
+#ffb84d

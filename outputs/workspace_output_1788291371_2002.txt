@@ -1,0 +1,22 @@
+<div align="center">
+
+# 🛡️ Fed-Dup
+
+### Federated Repository Duplication Engine
+
+**A database-free Git mirroring tool that duplicates repositories to a backup host — built with Python & Streamlit.**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/container-Docker-2496ED.svg)](https://www.docker.com/)
+[![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC.svg)](tests/)
+[![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Lint: flake8](https://img.shields.io/badge/lint-flake8-4B8BBE.svg)](https://flake8.pycqa.org/)
+
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/feddup)
+
+</div>
+
+---SOCIAL IMG EXISTS---
+-rw-r--r-- 1 root root 1695612 Sep  1 17:31 social-image.png

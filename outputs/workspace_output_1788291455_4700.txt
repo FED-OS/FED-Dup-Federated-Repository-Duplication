@@ -1,0 +1,89 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 3rem;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--grad-1);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  animation: fade-down 0.8s ease;
+}
+.hero-badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.hero-shield {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 30px rgba(102, 126, 234, 0.6));
+  animation: float-shield 4s ease-in-out infinite, fade-up 0.8s ease;
+}
+.hero h1 {
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--grad-1) 0%, var(--grad-3) 50%, var(--grad-4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  animation: fade-up 0.8s ease 0.1s both;
+}
+.hero .tagline {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  animation: fade-up 0.8s ease 0.2s both;
+}
+.hero-shields {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  animation: fade-up 0.8s ease 0.3s both;
+}
+.hero-shields img {
+  height: 30px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.hero-shields img:hover {
+  transform: translateY(-3px);
+}
+.hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fade-up 0.8s ease 0.4s both;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
